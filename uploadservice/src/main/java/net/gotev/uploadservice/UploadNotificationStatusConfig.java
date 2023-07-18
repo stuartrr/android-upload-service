@@ -66,7 +66,7 @@ public class UploadNotificationStatusConfig implements Parcelable {
 
     final PendingIntent getClickIntent(Context context) {
         if (clickIntent == null) {
-            return PendingIntent.getBroadcast(context, 0, new Intent(), PendingIntent.FLAG_UPDATE_CURRENT);
+            return PendingIntent.getBroadcast(context, 0, new Intent(), PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);
         }
 
         return clickIntent;
